@@ -13,14 +13,33 @@
 
 
 def compress(s):
-    pass # TODO:
+    if len(s) == 0:
+        return ""
+
+    result = ""
+    count = 1
+    for i in range(1, len(s)):
+        if s[i] == s[i-1]:
+            count += 1
+        else:
+            result += s[i-1] + str(count)
+            count = 1
+
+    result += s[-1] + str(count)
+
+    return result
+
+# TEST CASE
+print(compress('aabcccccaaa'))  # a2b1c5a3
+
+    
 
 
 
 
 # TEST CASES
-compress('ccaaatsss') # -> '2c3at3s'
-# compress('ssssbbz') # -> '4s2bz'
-# compress('ppoppppp') # -> '2po5p'
-# compress('nnneeeeeeeeeeeezz') # -> '3n12e2z'
-# compress('yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy');  # -> '127y'
+print(compress('ccaaatsss')) # -> '2c3at3s'
+print(compress('ssssbbz')) # -> '4s2bz'
+print(compress('ppoppppp')) # -> '2po5p'
+print(compress('nnneeeeeeeeeeeezz')) # -> '3n12e2z'
+print(compress('yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy'));  # -> '127y'

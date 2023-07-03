@@ -11,7 +11,7 @@
 # You may assume that the input string is well-formed according to the previously mentioned pattern.
 
 def decompress(s):
-    pass #TODO:
+    for 
 
 
 
