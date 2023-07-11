@@ -5,9 +5,9 @@
 # Anagrams are strings that contain the same characters, but in any order.
 
 def anagrams(s1, s2):
-    return sorted(s1) == sorted(s2) and not any(s1.count(char) != s2.count(char) for char in set(s1))
-
-
+    list1 = sorted(s1)
+    list2 = sorted(s2)
+    return list1 == list2 
   
 """
 aother solution will be to use a dictionary:
