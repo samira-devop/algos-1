@@ -43,3 +43,30 @@ print(compress('ssssbbz')) # -> '4s2bz'
 print(compress('ppoppppp')) # -> '2po5p'
 print(compress('nnneeeeeeeeeeeezz')) # -> '3n12e2z'
 print(compress('yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy'));  # -> '127y'
+
+
+"""
+Approche N2:
+s+= '.' #this will account the last letter
+we use a 2 pointer solution
+ i = 0 -> end   (trachs the letter)
+ j = 0 -> end   (trakcs occurrences)
+ 
+# Initialize a list the stote result
+result = []
+i, j = 0, 0
+
+# while loop to iterate thru string
+while j < len(S):
+    if s[i] == s[j]:
+        j== 1
+    else:
+        letter_count = j - i
+        if letter_count ==1:
+            result.append(s[i])
+        else:
+            result.apppend(str(letter_count))
+            result.append(s[i]
+        i = j 
+return ''.join(result)
+"""

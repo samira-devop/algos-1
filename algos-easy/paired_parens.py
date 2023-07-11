@@ -5,14 +5,6 @@
 # You may assume the string contains only alphabetic characters, '(', or ')'.
 
 
-def paired_parens(string):
-  pass # todo
-
-
-
-
-
-
 # TEST CASES
 paired_parens("(david)((abby))") # -> True
 # paired_parens("()rose(jeff") # -> False
